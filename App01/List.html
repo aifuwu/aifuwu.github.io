@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <title>汪俊头条</title>
+    <link href="CSS/List.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="JS/API.TT.js"></script>
+    <link rel="logo.ico" href="logo.ico" />
+</head>
+<body>
+    <div class="app01" id="app01">
+        <div class="head">
+
+        </div>
+        <div class="main">
+            <div class="category">
+                <a href="javascript:;" class="logo"></a>
+                <a href="javascript:;" class="item" v-for="(item,index) in categories" :key="item.ID">{{item.Name}}</a>
+            </div>
+            <div class="list">
+                <div class="top">
+
+                </div>
+                <div class="item1" v-for="(item,index) in list">
+                    <div class="title"><a :href="'Detail.html?ID='+item.ID" target="_blank">{{item.Title}}</a></div>
+                    <div class="info">
+                        <div class="left">
+                            <div class="category">时政</div>
+                            <div class="logo"></div>
+                            <div class="creator">{{item.DataSourceName}}</div>
+                            <div class="comment">{{item.ReadCount}}阅读</div>
+                            <div class="createtime">9分钟前</div>
+                        </div>
+                        <div class="right">
+                            <div class="reduce">不感兴趣</div>
+                            <div class="close">×</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="item2" v-for="(item,index) in list">
+                    <div class="left">
+                        <img />
+                    </div>
+                    <div class="right">
+                        <div class="title">{{item.Title}}</div>
+                        <div class="info">
+                            <div class="left">
+                                <div class="category">时政</div>
+                                <div class="logo"></div>
+                                <div class="creator">{{item.DataSourceName}}</div>
+                                <div class="comment">{{item.ReadCount}}阅读</div>
+                                <div class="createtime">9分钟前</div>
+                            </div>
+                            <div class="right">
+                                <div class="reduce">不感兴趣</div>
+                                <div class="close">×</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div id="pager" v-show="pageStatus===1||pageStatus===2">加载中...</div>
+</div>
+            <div class="other">
+                <div class="block1">
+                    <div class="search">
+                        <input type="text" />
+                        <a href="javascript:;">搜索</a>
+                    </div>
+                </div>
+                <div class="block2">
+                    <div class="row1"> <a href="javascript:;">退出登录</a></div>
+                    <div class="row2">
+                        <a href="javascript:;">
+                            <img src="https://p1.pstatp.com/thumb/382c00029808c7d718e8" />
+                            <div>汪俊</div>
+                        </a>
+
+                    </div>
+                    <div class="row3">
+                        <a href="javascript:;"><span>9999</span><span>收藏</span></a>
+                        <a href="javascript:;"><span>9999</span><span>阅读</span></a>
+                    </div>
+                </div>
+                <div class="block3">
+                    <div class="title">24小时热闻</div>
+                    <a href="javascrtip:;"> <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" /><div class="title">他是新中国影坛第一代帅哥，颜值与演技并存，却英年早逝让人叹息</div></a>
+                    <a href="javascrtip:;"> <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" /><div class="title">他是新中国影坛第一代帅哥，颜值与演技并存，却英年早逝让人叹息</div></a>
+
+                </div>
+                <div class="block4">
+                    <div class="title">24小时热闻</div>
+                    <div class="items">
+                        <a href="javascrtip:;"> <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" /><div class="title">他是新中国影坛第一代帅哥，颜值与演技并存，却英年早逝让人叹息</div></a>
+                        <a href="javascrtip:;"> <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" /><div class="title">他是新中国影坛第一代帅哥，颜值与演技并存，却英年早逝让人叹息</div></a>
+                        <a href="javascrtip:;"> <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" /><div class="title">他是新中国影坛第一代帅哥，颜值与演技并存，却英年早逝让人叹息</div></a>
+                        <a href="javascrtip:;"> <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" /><div class="title">他是新中国影坛第一代帅哥，颜值与演技并存，却英年早逝让人叹息</div></a>
+                    </div>
+                </div>
+                <div class="block5">
+                    <div class="title">数据源</div>
+                    <div class="items">
+                        <a href="javascrtip:;"> <div class="title">链接 链接名称</div></a>
+                        <a href="javascrtip:;">  <div class="title">链接名称</div></a>
+                        <a href="javascrtip:;"> <div class="title">链接名称链接名称</div></a>
+                        <a href="javascrtip:;">  <div class="title">链接名</div></a>
+                        <a href="javascrtip:;"> <div class="title"> 称链接名称</div></a>
+                        <a href="javascrtip:;">  <div class="title"> 接名称</div></a>
+                        <a href="javascrtip:;"> <div class="title"> 接名称</div></a>
+                        <a href="javascrtip:;">  <div class="title"> 链接名称</div></a>
+                    </div>
+                </div>
+                <div class="block6">
+                    <div class="title">
+                        <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" />
+                        <div class="info">
+                            <span>作者</span>
+                            <a href="javascript:;">关注</a>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <a href="javascrtip:;"> <div class="title">链接 链接名称</div></a>
+                        <a href="javascrtip:;">  <div class="title">链接名称</div></a>
+                        <a href="javascrtip:;"> <div class="title">链接名称链接名称</div></a>
+                        <a href="javascrtip:;">  <div class="title">链接名</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app01',
+            data: {
+                categories: [],
+                list: [],
+                pageIndex:0,
+                pageSize:10,
+                pageStatus:0,//0 未加载 1 加载中 2 没有更多
+                pageMsg:"加载中..."
+            },
+            methods: {
+                GetTree: function () {
+                    let vThis = this
+                    API.TT.GetTree()
+                        .then(function (res) {
+                            console.log(res);
+                            res = res.data
+                            if (true === res.SUCCESS) {
+                                var data = res.DATA
+                                vThis.categories = data.filter(p => { return p.ParentID != "00000000-0000-0000-0000-000000000000" })
+                            }
+
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                },
+                QueryList: function () {
+                    if(this.pageStatus==1){
+                        return;
+                    }
+                    let vThis = this
+                    let pageIndex = this.pageIndex+1
+                    let pageSize = this.pageSize
+                    this.pageStatus=1
+                    let query={
+                        Method: 'QueryList',
+                        Param: [JSON.stringify({ PageIndex: pageIndex, PageSize: pageSize, SortBy:[1]})]
+                    }
+                    API.TT.QueryList(query)
+                        .then(function (res) {
+                            vThis.pageStatus=0
+                            vThis.pageIndex+=1
+                            console.log(res);
+                            res = res.data
+                            if (true === res.SUCCESS&&Array.isArray( res.DATA)) {
+                                let data = res.DATA
+                                if(0<data.length){
+                                    list =vThis.list
+                                    list=list.concat(data) 
+                                    vThis.list=list
+                                }
+                                else{
+                                    this.pageMsg="没有更多...";
+                                }
+                            } 
+                        })
+                        .catch(function (error) {
+                            vThis.pageStatus=0
+                            console.log(error);
+                        });
+                },
+            },
+            created: function () {
+                this.GetTree();
+                this.QueryList();
+            }
+        })
+
+        document.addEventListener("scroll", function () {
+            let pos = document.querySelector("#pager");
+            console.log(pos.offsetHeight, pos.offsetTop, pos.scrollTop, pos.scrollHeight, pos.clientTop, document.body.scrollTop | document.documentElement.scrollTop,document.body.scrollHeight)
+            console.log(((document.body.scrollTop | document.documentElement.scrollTop) - pos.offsetTop))
+            if (((document.body.scrollTop | document.documentElement.scrollTop) -document.body.scrollHeight) <= 500) {
+                app.QueryList()
+            }
+
+        })
+
+    </script>
+</body>
+</html>

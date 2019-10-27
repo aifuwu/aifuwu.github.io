@@ -1,0 +1,672 @@
+﻿body {
+    margin: 0;
+}
+
+.app01 {
+    display: flex;
+    flex-direction: column;
+    min-width: 80rem;
+}
+
+    .app01 > .head {
+        margin-bottom: 0.5rem;
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,.12);
+    }
+
+    .app01 > .head >.top{
+        height: 2.5rem;
+        background-color: #222; 
+    }
+
+        .app01 > .head > .path {
+            height: 4rem;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+        }
+
+            .app01 > .head > .path a {
+                text-decoration: none;
+                color: #222;
+            }
+
+            .app01 > .head > .path > .left > .logo {
+                text-align: center;
+                color: #222;
+                text-decoration: none;
+                display: block;
+                width: 10rem;
+                line-height: 5rem;
+                border-radius: 0.3rem;
+                background-image: url(../img/logo.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-x: -50px;
+            }
+
+            .app01 > .head > .path > .left {
+                display: flex;
+                line-height: 4rem;
+            }
+
+                .app01 > .head > .path > .left > .path {
+                }
+                .app01 > .head > .path > .left > .path {
+                }
+
+            .app01 > .head > .path > .right {
+            }
+
+                .app01 > .head > .path > .right > .search {
+                    height: 4rem;
+                    line-height: 4rem;
+                    display: flex;
+                    align-items: center;
+                }
+
+                    .app01 > .head > .path > .right > .search input {
+                        width: 20rem;
+                        height: calc(2rem - 2px);
+                        font-size: 1.3rem;
+                        background-color: #f5f6f7;
+                        border: 1px solid #e8e8e8;
+                        border-radius: .3rem 0 0 .3rem;
+                    }
+
+                    .app01 > .head > .path > .right > .search a {
+                        width: 5rem;
+                        height: 2rem;
+                        line-height: 2rem;
+                        text-align: center;
+                        border: 1px solid #208eda;
+                        background-color: #208eda;
+                        color: #fff;
+                        border-radius: 0 .3rem .3rem 0;
+                    }
+
+    .app01 > .main {
+        display: flex;
+        width: 80rem;
+        align-self: center;
+        /*background-color:aqua;*/
+    }
+
+        .app01 > .main > .category {
+            width: 10rem;
+            /*background-color: #ffd800;*/
+            display: flex;
+            flex-direction: column;
+        }
+
+            .app01 > .main > .category .logo {
+                text-align: center;
+                color: #222;
+                text-decoration: none;
+                display: block;
+                width: 8rem;
+                height: 5rem;
+                line-height: 5rem;
+                border-radius: 0.3rem;
+            }
+
+            .app01 > .main > .category > .item {
+                text-align: center;
+                color: #222;
+                text-decoration: none;
+                display: block;
+                width: 8rem;
+                height: 3rem;
+                line-height: 3rem;
+                border-radius: 0.3rem;
+            }
+
+
+
+
+                .app01 > .main > .category > .item:hover {
+                    background-color: #ed4040;
+                    color: #fff;
+                }
+
+        .app01 > .main > .center { 
+        }
+
+            .app01 > .main > .center > .detail {
+                width: 44rem;
+                display: flex;
+                flex-direction: column;
+            }
+                .app01 > .main > .center > .detail > .title {
+                    color: #222;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 3rem;
+                }
+                .app01 > .main > .center > .detail > .info {
+                    color: #777;
+                    display: flex;
+                    align-items: center;
+                    font-size: 0.9rem;
+                    line-height: 3rem;
+                }
+
+
+                    .app01 > .main > .center > .detail > .info > .left {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .app01 > .main > .center > .detail > .info > .right {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .app01 > .main > .center > .detail > .info .category {
+                        margin-right: 0.3rem;
+                        border: 1px solid #777;
+                        padding: 0 0.2rem 0 0.2rem;
+                        border-radius: 0.2rem;
+                        width: 2rem;
+                        height: 1.1rem;
+                        line-height: 1.1rem;
+                    }
+
+                    .app01 > .main > .center > .detail > .info .logo {
+                        margin-right: 0.1rem;
+                        width: 0.9rem;
+                        height: 0.9rem;
+                        border-radius: 0.9rem;
+                        background-color: azure;
+                    }
+
+                    .app01 > .main > .center > .detail > .info .creator {
+                        margin-right: 0.3rem;
+                    }
+
+                    .app01 > .main > .center > .detail > .info .comment {
+                        margin-right: 0.2rem;
+                    }
+
+                    .app01 > .main > .center > .detail > .info .createtime {
+                    }
+
+                .app01 > .main > .center > .detail > .content {
+                    line-height: 1.7rem;
+                    padding-right: 2rem;
+                    text-align: justify;
+                }
+
+
+            .app01 > .main > .center > .list {
+                width: 44rem;
+            }
+
+                .app01 > .main > .center > .list > .title {
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    border-left: 0.5rem solid #ed4040;
+                    padding-left: 0.5rem;
+                    margin-top: 0.5rem;
+                }
+
+                .app01 > .main > .center > .list > .item1 {
+                    width: 100%;
+                    height: 8rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    border-bottom: 1px solid #e8e8e8;
+                }
+
+                    .app01 > .main > .center > .list > .item1 > .title {
+                        color: #222;
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                    }
+
+                    .app01 > .main > .center > .list > .item1 > .info {
+                        color: #777;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-size: 0.9rem;
+                    }
+
+
+                        .app01 > .main > .center > .list > .item1 > .info > .left {
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .app01 > .main > .center > .list > .item1 > .info > .right {
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .app01 > .main > .center > .list > .item1 > .info .category {
+                            margin-right: 0.3rem;
+                            border: 1px solid #777;
+                            padding: 0 0.2rem 0 0.2rem;
+                            border-radius: 0.2rem;
+                        }
+
+                        .app01 > .main > .center > .list > .item1 > .info .logo {
+                            margin-right: 0.1rem;
+                            width: 0.9rem;
+                            height: 0.9rem;
+                            border-radius: 0.9rem;
+                            background-color: azure;
+                        }
+
+                        .app01 > .main > .center > .list > .item1 > .info .creator {
+                            margin-right: 0.3rem;
+                        }
+
+                        .app01 > .main > .center > .list > .item1 > .info .comment {
+                            margin-right: 0.2rem;
+                        }
+
+                        .app01 > .main > .center > .list > .item1 > .info .createtime {
+                        }
+
+                        .app01 > .main > .center > .list > .item1 > .info .reduce {
+                            margin-right: 0.3rem;
+                        }
+
+                        .app01 > .main > .center > .list > .item1 > .info .close {
+                        }
+
+
+
+                .app01 > .main > .center > .list > .item2 {
+                    width: 100%;
+                    height: 8rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #e8e8e8;
+                }
+
+                    .app01 > .main > .center > .list > .item2 > .left {
+                        width: 14rem;
+                        height: 7rem;
+                        background-color: #999;
+                        border-radius: 0.3rem;
+                    }
+
+                        .app01 > .main > .center > .list > .item2 > .left > img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 0.3rem;
+                        }
+
+                    .app01 > .main > .center > .list > .item2 > .right {
+                        padding-left: 0.5rem;
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+
+                        .app01 > .main > .center > .list > .item2 > .right > .title {
+                            color: #222;
+                            font-size: 1.3rem;
+                            font-weight: 700;
+                            padding-bottom: 0.5rem;
+                        }
+
+                        .app01 > .main > .center > .list > .item2 > .right > .info {
+                            color: #777;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            font-size: 0.9rem;
+                        }
+
+
+                            .app01 > .main > .center > .list > .item2 > .right > .info > .left {
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            .app01 > .main > .center > .list > .item2 > .right > .info > .right {
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            .app01 > .main > .center > .list > .item2 > .right > .info .category {
+                                margin-right: 0.3rem;
+                                border: 1px solid #777;
+                                padding: 0 0.2rem 0 0.2rem;
+                                border-radius: 0.2rem;
+                            }
+
+                            .app01 > .main > .center > .list > .item2 > .right > .info .logo {
+                                margin-right: 0.1rem;
+                                width: 0.9rem;
+                                height: 0.9rem;
+                                border-radius: 0.9rem;
+                                background-color: azure;
+                            }
+
+                            .app01 > .main > .center > .list > .item2 > .right > .info .creator {
+                                margin-right: 0.3rem;
+                            }
+
+                            .app01 > .main > .center > .list > .item2 > .right > .info .comment {
+                                margin-right: 0.2rem;
+                            }
+
+                            .app01 > .main > .center > .list > .item2 > .right > .info .createtime {
+                            }
+
+                            .app01 > .main > .center > .list > .item2 > .right > .info .reduce {
+                                margin-right: 0.3rem;
+                            }
+
+                            .app01 > .main > .center > .list > .item2 > .right > .info .close {
+                            }
+
+
+
+
+
+
+
+
+
+
+        .app01 > .main > .other {
+            width: 20rem;
+        }
+
+            .app01 > .main > .other a {
+                text-decoration: none;
+                color: #222;
+            }
+
+            .app01 > .main > .other > .block1 > .search {
+                height: 2rem;
+                line-height: 2rem;
+                display: flex;
+                align-items: center;
+            }
+
+                .app01 > .main > .other > .block1 > .search input {
+                    width: 16rem;
+                    height: calc(2rem - 2px);
+                    font-size: 1.3rem;
+                    background-color: #f5f6f7;
+                    border: 1px solid #e8e8e8;
+                    border-radius: .3rem 0 0 .3rem;
+                }
+
+                .app01 > .main > .other > .block1 > .search a {
+                    width: 5rem;
+                    height: 2rem;
+                    line-height: 2rem;
+                    text-align: center;
+                    border: 1px solid #208eda;
+                    background-color: #208eda;
+                    color: #fff;
+                    border-radius: 0 .3rem .3rem 0;
+                }
+
+
+            .app01 > .main > .other > .block2 {
+                height: 16rem;
+                background-color: #f4f5f6;
+                margin-top: 0.5rem;
+                border-top: 0.2rem solid #ed4040;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+                .app01 > .main > .other > .block2 > .row1 {
+                    display: flex;
+                    justify-content: flex-end;
+                    font-size: 0.9rem;
+                    padding-right: 0.5rem;
+                    padding-top: 0.5rem;
+                }
+
+                .app01 > .main > .other > .block2 > .row2 > a {
+                    display: block;
+                    text-align: center;
+                }
+
+                .app01 > .main > .other > .block2 > .row2 img {
+                    border-radius: 5rem;
+                    width: 5rem;
+                    height: 5rem;
+                }
+
+
+                .app01 > .main > .other > .block2 > .row2 div {
+                    padding-top: 0.5rem;
+                }
+
+                .app01 > .main > .other > .block2 > .row3 {
+                    display: flex;
+                    justify-content: space-around;
+                    height: 3rem;
+                    padding-bottom: 1rem;
+                }
+
+                    .app01 > .main > .other > .block2 > .row3 a {
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                    }
+
+                    .app01 > .main > .other > .block2 > .row3 span:first-child {
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+            .app01 > .main > .other > .block3 {
+                height: 16rem;
+                background-color: #f4f5f6;
+                margin-top: 0.5rem;
+                border-top: 0.2rem solid #ed4040;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+                .app01 > .main > .other > .block3 > .title {
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    padding: 0.5rem 0 0.5rem 0.5rem;
+                }
+
+                .app01 > .main > .other > .block3 > a {
+                    display: flex;
+                    align-items: center;
+                    padding: 0.25rem;
+                    padding-left: 0.5rem;
+                }
+
+                    .app01 > .main > .other > .block3 > a img {
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 0.3rem;
+                    }
+
+                    .app01 > .main > .other > .block3 > a .title {
+                        font-size: 0.8rem;
+                        padding-left: 0.5rem;
+                    }
+
+
+
+
+
+            .app01 > .main > .other > .block4 {
+                background-color: #f4f5f6;
+                margin-top: 0.5rem;
+                border-top: 0.2rem solid #ed4040;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-bottom: 1rem;
+            }
+
+                .app01 > .main > .other > .block4 > .title {
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    padding: 0.5rem 0 0.5rem 0.5rem;
+                }
+
+                .app01 > .main > .other > .block4 > .items {
+                    display: flex;
+                    padding-left: 0.5rem;
+                    flex-wrap: wrap;
+                }
+
+                    .app01 > .main > .other > .block4 > .items > a {
+                        display: flex;
+                        padding: 0.25rem;
+                        width: 9rem;
+                        flex-direction: column;
+                    }
+
+                        .app01 > .main > .other > .block4 > .items > a img {
+                            width: 8rem;
+                            height: 5rem;
+                            border-radius: 0.3rem;
+                        }
+
+                        .app01 > .main > .other > .block4 > .items > a .title {
+                            font-size: 0.8rem;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: normal;
+                            width: 8rem;
+                            height: 2rem;
+                            padding-top: 0.3rem;
+                        }
+
+
+
+            .app01 > .main > .other > .block5 {
+                background-color: #f4f5f6;
+                margin-top: 0.5rem;
+                border-top: 0.2rem solid #ed4040;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-bottom: 1rem;
+            }
+
+                .app01 > .main > .other > .block5 > .title {
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    padding: 0.5rem 0 0.5rem 0.5rem;
+                }
+
+                .app01 > .main > .other > .block5 > .items {
+                    display: flex;
+                    padding-left: 0.5rem;
+                    flex-wrap: wrap;
+                }
+
+                    .app01 > .main > .other > .block5 > .items > a {
+                        display: flex;
+                        padding: 0.25rem;
+                    }
+
+
+                        .app01 > .main > .other > .block5 > .items > a .title {
+                            font-size: 0.8rem;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: normal;
+                            padding-top: 0.3rem;
+                        }
+
+
+            .app01 > .main > .other > .block6 {
+                background-color: #f4f5f6;
+                margin-top: 0.5rem;
+                border-top: 0.2rem solid #ed4040;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-bottom: 1rem;
+            }
+
+                .app01 > .main > .other > .block6 > .title {
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    padding: 0.5rem 0 0.5rem 0.5rem;
+                    height: 3rem;
+                    display: flex;
+                    align-items: center;
+                }
+
+                    .app01 > .main > .other > .block6 > .title img {
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 3rem;
+                    }
+
+                    .app01 > .main > .other > .block6 > .title .info {
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 1rem;
+                    }
+
+                    .app01 > .main > .other > .block6 > .title span {
+                        padding-bottom: 0.3rem;
+                    }
+
+                    .app01 > .main > .other > .block6 > .title a {
+                        background-color: #208eda;
+                        color: #fff;
+                        font-weight: 500;
+                        font-size: 0.9rem;
+                        text-align: center;
+                        border-radius: 0.3rem;
+                    }
+
+                .app01 > .main > .other > .block6 > .items {
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 0.5rem;
+                    flex-wrap: wrap;
+                }
+
+                    .app01 > .main > .other > .block6 > .items > a {
+                        display: flex;
+                        padding: 0.25rem;
+                    }
+
+
+                        .app01 > .main > .other > .block6 > .items > a .title {
+                            font-size: 0.8rem;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: normal;
+                            padding-top: 0.3rem;
+                        }
+
+
+
+
+
+
+
+
+

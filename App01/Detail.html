@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>汪俊头条</title>
+    <link href="CSS/Detail.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="JS/API.TT.js"></script>
+</head>
+<body>
+    <div class="app01" id="app01">
+        <div class="head">
+            <div class="top"></div>
+            <div class="path">
+                <div class="left">
+                    <a href="javascript:;" class="logo"></a>
+                    <div class="path">
+                        <a href="javascript:;">路径1</a>
+                        <span>/</span>
+                        <a href="javascript:;">路径2</a>
+                        <span>/</span>
+                        <a href="javascript:;">路径3</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="search">
+                        <input type="text" />
+                        <a href="javascript:;">搜索</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="category">
+                <a href="javascript:;" class="logo">LOGO</a>
+                <a href="javascript:;" class="item" v-for="(item,index) in categories">{{item.name}}</a>
+            </div>
+            <div class="center">
+                <div class="detail">
+                    <div class="title">
+                        {{article.Summary.Title}}
+                    </div>
+                    <div class="info">
+                        <div class="category">时政</div>
+                        <div class="logo"></div>
+                        <div class="creator">新华网客户端</div>
+                        <div class="comment">101评论</div>
+                        <div class="createtime">9分钟前</div>
+                    </div>
+                    <div class="content">
+                        {{article.Detail.PlainText}}
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="title">相关推荐</div>
+                    <div class="item1" v-for="(item,index) in list">
+                        <div class="title">{{item.Title}}</div>
+                        <div class="info">
+                            <div class="left">
+                                <div class="category">时政</div>
+                                <div class="logo"></div>
+                                <div class="creator">新华网客户端</div>
+                                <div class="comment">101评论</div>
+                                <div class="createtime">9分钟前</div>
+                            </div>
+                            <div class="right">
+                                <div class="reduce">不感兴趣</div>
+                                <div class="close">×</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item2" v-for="(item,index) in list">
+                        <div class="left">
+                            <img />
+                        </div>
+                        <div class="right">
+
+                            <div class="title">{{item.Title}}</div>
+                            <div class="info">
+                                <div class="left">
+                                    <div class="category">时政</div>
+                                    <div class="logo"></div>
+                                    <div class="creator">新华网客户端</div>
+                                    <div class="comment">101评论</div>
+                                    <div class="createtime">9分钟前</div>
+                                </div>
+                                <div class="right">
+                                    <div class="reduce">不感兴趣</div>
+                                    <div class="close">×</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="other">
+                <!--<div class="block1">
+                    <div class="search">
+                        <input type="text" />
+                        <a href="javascript:;">搜索</a>
+                    </div>
+                </div>-->
+                <div class="block2">
+                    <div class="row1"> <a href="javascript:;">退出登录</a></div>
+                    <div class="row2">
+                        <a href="javascript:;">
+                            <img src="https://p1.pstatp.com/thumb/382c00029808c7d718e8" />
+                            <div>汪俊</div>
+                        </a>
+
+                    </div>
+                    <div class="row3">
+                        <a href="javascript:;"><span>9999</span><span>收藏</span></a>
+                        <a href="javascript:;"><span>9999</span><span>阅读</span></a>
+                    </div>
+                </div>
+                <div class="block3">
+                    <div class="title">24小时热闻</div>
+                    <a href="javascrtip:;"> <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" /><div class="title">他是新中国影坛第一代帅哥，颜值与演技并存，却英年早逝让人叹息</div></a>
+                    <a href="javascrtip:;"> <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" /><div class="title">他是新中国影坛第一代帅哥，颜值与演技并存，却英年早逝让人叹息</div></a>
+
+                </div>
+                <div class="block4">
+                    <div class="title">24小时热闻</div>
+                    <div class="items">
+                        <a href="javascrtip:;"> <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" /><div class="title">他是新中国影坛第一代帅哥，颜值与演技并存，却英年早逝让人叹息</div></a>
+                        <a href="javascrtip:;"> <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" /><div class="title">他是新中国影坛第一代帅哥，颜值与演技并存，却英年早逝让人叹息</div></a>
+                        <a href="javascrtip:;"> <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" /><div class="title">他是新中国影坛第一代帅哥，颜值与演技并存，却英年早逝让人叹息</div></a>
+                        <a href="javascrtip:;"> <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" /><div class="title">他是新中国影坛第一代帅哥，颜值与演技并存，却英年早逝让人叹息</div></a>
+                    </div>
+                </div>
+                <div class="block5">
+                    <div class="title">数据源</div>
+                    <div class="items">
+                        <a href="javascrtip:;"> <div class="title">链接 链接名称</div></a>
+                        <a href="javascrtip:;">  <div class="title">链接名称</div></a>
+                        <a href="javascrtip:;"> <div class="title">链接名称链接名称</div></a>
+                        <a href="javascrtip:;">  <div class="title">链接名</div></a>
+                        <a href="javascrtip:;"> <div class="title"> 称链接名称</div></a>
+                        <a href="javascrtip:;">  <div class="title"> 接名称</div></a>
+                        <a href="javascrtip:;"> <div class="title"> 接名称</div></a>
+                        <a href="javascrtip:;">  <div class="title"> 链接名称</div></a>
+                    </div>
+                </div>
+                <div class="block6">
+                    <div class="title">
+                        <img src="https://p1.pstatp.com/list/240x240/pgc-image/RDi18ED2GV5dIj" />
+                        <div class="info">
+                            <span>作者</span>
+                            <a href="javascript:;">关注</a>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <a href="javascrtip:;"> <div class="title">链接 链接名称</div></a>
+                        <a href="javascrtip:;">  <div class="title">链接名称</div></a>
+                        <a href="javascrtip:;"> <div class="title">链接名称链接名称</div></a>
+                        <a href="javascrtip:;">  <div class="title">链接名</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app01',
+            data: {
+                categories: [{ name: '收藏', id: '1' }, { name: '分享', id: '2' }, { name: '评论', id: '3' }],
+                list: [{ Title: "庆祝中华人民共和国成立70周年大会在京隆重举行 习近平发表重要讲话并检阅受阅部队" }, { Title: "庆祝中华人民共和国成立70周年大会在京隆重举行 习近平发表重要讲话并检阅受阅部队" }, { Title: "庆祝中华人民共和国成立70周年大会在京隆重举行 习近平发表重要讲话并检阅受阅部队" }, { Title: "庆祝中华人民共和国成立70周年大会在京隆重举行 习近平发表重要讲话并检阅受阅部队" }],
+                article: {}
+
+            },
+            methods: {
+                QueryItem: function () {
+                    let vThis = this
+                    var id=API.GetQueryParam("ID")
+                    API.TT.QueryItem(id)
+                        .then(function (res) {
+                            console.log(res);
+                            res = res.data
+                            if (true === res.SUCCESS) {
+                                var data = res.DATA
+                                vThis.article = data
+                            }
+
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                },
+            }, 
+            created: function () {
+                this.QueryItem();
+            }
+        })
+    </script>
+</body>
+</html>
